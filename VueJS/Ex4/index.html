@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="" />
+    <meta name="referrer" content="origin" />
+    <meta name="title" content="">
+    <meta name="keywords" content="">
+    <meta property="og:site_name" content="">
+    <meta property="og:title" content="">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
+    <meta property="og:description" content="">
+    <meta property="og:locale" content="fr_FR">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>J12</title>
+</head>
+
+<body>
+    <header>
+
+    </header>
+    <main>
+        <section id="app">
+            <h2>To Do List</h2>
+            <ul>
+                <li v-for="task in tasks">
+                    {{ task }}
+                    <button @click="removeTask">Fait !</button>
+                </li>
+            </ul>
+            <form @submit.prevent="addTask">
+                <fieldset>
+                    <label for="task">Saisir la tâche a effectuer </label>
+                    <input type="text" name="task" id="task" />
+                </fieldset>
+                <button type="submit">Ajouter</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+    <script type="module" src="assets/js/index.js"></script>
+</body>
+
+</html>
